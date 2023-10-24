@@ -1,8 +1,5 @@
 # RECEPT ATTENDANCE APP
 
-# Index.php file maken
-# Autoload file maken
-
 ## Models
 1. Players Model
 2. Playerlist Model
