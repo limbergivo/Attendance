@@ -17,16 +17,18 @@
  4. De volgende functies voegen we ook toe aan de class: SetName, SetAge,SetPosition -> Dit zijn Setters 
 
 ## Voorbeeld Getters & Setters:
->   private $name;
-    public function setName( $value )    
+```
+private $name;
+public function setName( $value )    
     {
         $this->name = $value;    
-    }
+}
 
-    public function getName()    
-    {                
-        return $this->name;    
-    } 
+public function getName()    
+{                
+return $this->name;    
+}
+```
 
 ---
 
