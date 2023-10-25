@@ -6,6 +6,12 @@ private string $name;
 private int $age;
 private string $position;
 
+private int $minAge;
+
+public function __construct($minAge = 14)
+{
+    $this->minAge = $minAge;
+}
 
     /**
      * @return mixed
@@ -35,6 +41,10 @@ public function setName(string $name)
      */
     public function setAge(int $age)
     {
+        if($age < $this->minAge){
+            throw new Exception("Min age is ".$this->minAge." to play.");
+        }
+
         $this->age = $age;
     }
 
