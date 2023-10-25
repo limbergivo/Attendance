@@ -1,11 +1,10 @@
 <?php
 
-class Players
+class Player
 {
-private $name;
-private $age;
-
-private $position;
+private string $name;
+private int $age;
+private string $position;
 
 
     /**
@@ -19,7 +18,7 @@ private $position;
     /**
     * @param mixed $name
     */
-public function setName($name)
+public function setName(string $name)
 {
     $this->name = $name;
 }
@@ -34,7 +33,7 @@ public function setName($name)
     /**
      * @param mixed $age
      */
-    public function setAge($age)
+    public function setAge(int $age)
     {
         $this->age = $age;
     }
@@ -50,7 +49,7 @@ public function setName($name)
     /**
      * @param mixed $position
      */
-    public function setPosition($position)
+    public function setPosition(string $position)
     {
         $this->position = $position;
     }
