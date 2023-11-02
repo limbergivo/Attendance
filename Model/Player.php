@@ -1,22 +1,21 @@
 <?php
 
-class Player
+class Player implements \Interface\IPlayer
 {
-private string $name;
-private int $age;
-private string $position;
+    private string $name;
+    private int $age;
+    private string $position;
+    private int $minAge;
 
-private int $minAge;
-
-public function __construct($minAge = 14)
-{
-    $this->minAge = $minAge;
-}
+    public function __construct($minAge = 14)
+    {
+        $this->minAge = $minAge;
+    }
 
     /**
      * @return mixed
     */
-    public function getName()
+    public function getName() :string
     {
         return $this->name;
     }
@@ -24,22 +23,22 @@ public function __construct($minAge = 14)
     /**
     * @param mixed $name
     */
-public function setName(string $name)
-{
-    $this->name = $name;
-}
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
 
     /**
     * @return mixed
     */
-    public function getAge()
+    public function getAge(): int
     {
         return $this->age;
     }
     /**
      * @param mixed $age
      */
-    public function setAge(int $age)
+    public function setAge(int $age): void
     {
         if($age < $this->minAge){
             throw new Exception("Min age is ".$this->minAge." to play.");
@@ -51,7 +50,7 @@ public function setName(string $name)
     /**
      * @return mixed
      */
-    public function getPosition()
+    public function getPosition(): string
     {
         return $this->position;
     }
@@ -59,7 +58,7 @@ public function setName(string $name)
     /**
      * @param mixed $position
      */
-    public function setPosition(string $position)
+    public function setPosition(string $position): void
     {
         $this->position = $position;
     }

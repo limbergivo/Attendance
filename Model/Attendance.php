@@ -3,38 +3,39 @@
 class Attendance
 {
     // ID van de database van de speler eruit halen in MYSQL
-    private Team $team;
+    private int $player_id;
     private DateTime $date;
+    protected bool $attendance = false;
 
-    /**
-     * @return mixed
-     */
-    public function getTeam()
+    public function getPlayerId(): int
     {
-        return $this->team;
+        return $this->player_id;
     }
 
-    /**
-     * @param mixed $player
-     */
-    public function setPlayer(Team $team): void
+    public function setPlayerId(int $player_id): void
     {
-        $this->team = $team;
+        $this->player_id = $player_id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDate()
+    public function getDate(): DateTime
     {
         return $this->date;
     }
 
-    /**
-     * @param mixed $date
-     */
     public function setDate(DateTime $date): void
     {
         $this->date = $date;
     }
+
+    public function isAttendance(): bool
+    {
+        return $this->attendance;
+    }
+
+    public function setAttendance(bool $attendance): void
+    {
+        $this->attendance = $attendance;
+    }
+
+
 }
